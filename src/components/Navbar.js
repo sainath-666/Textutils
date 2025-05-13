@@ -37,7 +37,6 @@ const Navbar = (props) => {
               </Link>
             </li>
           </ul>
-
           <div className="d-flex align-items-center">
             <a
               href="https://www.linkedin.com/in/sainath666"
@@ -46,7 +45,7 @@ const Navbar = (props) => {
               className="btn btn-outline-primary me-2"
               style={{
                 color: props.mode === "dark" ? "white" : "#042743",
-                borderColor: props.mode === "dark" ? "white" : "#042743"
+                borderColor: props.mode === "dark" ? "white" : "#042743",
               }}
             >
               <i className="fab fa-linkedin me-1"></i>
@@ -59,40 +58,40 @@ const Navbar = (props) => {
               className="btn btn-outline-primary me-3"
               style={{
                 color: props.mode === "dark" ? "white" : "#042743",
-                borderColor: props.mode === "dark" ? "white" : "#042743"
+                borderColor: props.mode === "dark" ? "white" : "#042743",
               }}
             >
               <i className="fab fa-github me-1"></i>
               GitHub
             </a>
-
             <div className="theme-toggle">
               <div
                 className={`form-check form-switch text-${
                   props.mode === "light" ? "dark" : "light"
                 }`}
               >
-              <input
-                className="form-check-input"
-                onClick={props.toggleMode}
-                type="checkbox"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                className="form-check-label ms-2"
-                htmlFor="flexSwitchCheckDefault"
-              >
-                <i
-                  className={`fas fa-${
-                    props.mode === "light" ? "moon" : "sun"
-                  } me-1`}
-                ></i>
-                {props.mode === "light" ? "Dark Mode" : "Light Mode"}
-              </label>
+                <input
+                  className="form-check-input"
+                  onClick={props.toggleMode}
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  className="form-check-label ms-2"
+                  htmlFor="flexSwitchCheckDefault"
+                >
+                  <i
+                    className={`fas fa-${
+                      props.mode === "light" ? "moon" : "sun"
+                    } me-1`}
+                  ></i>
+                  {props.mode === "light" ? "Dark Mode" : "Light Mode"}
+                </label>
+              </div>
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </nav>
   );
 };
