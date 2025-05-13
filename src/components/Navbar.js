@@ -35,7 +35,8 @@ const Navbar = (props) => {
                 <i className="fas fa-info-circle me-1"></i>
                 About
               </Link>
-            </li>          </ul>
+            </li>
+          </ul>
 
           <div className="d-flex align-items-center">
             <a
