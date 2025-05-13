@@ -6,9 +6,9 @@ const Navbar = (props) => {
     <nav
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
-      {" "}
-      <div className="container-fluid">
+      <div className="container">
         <Link className="navbar-brand" to="/">
+          <i className="fas fa-text-height me-2"></i>
           {props.title}
         </Link>
         <button
@@ -25,43 +25,42 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link" aria-current="page" to="/">
+                <i className="fas fa-home me-1"></i>
                 Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">
+                <i className="fas fa-info-circle me-1"></i>
                 About
               </Link>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-primary" type="submit">Search</button>
-      </form> */}
 
-          <div
-            className={`form-check form-switch text-${
-              props.mode === "light" ? "dark" : "light"
-            }`}
-          >
-            <input
-              className="form-check-input"
-              onClick={props.toggleMode}
-              type="checkbox"
-              id="flexSwitchCheckDefault"
-            />
-
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckDefault"
+          <div className="theme-toggle">
+            <div
+              className={`form-check form-switch text-${
+                props.mode === "light" ? "dark" : "light"
+              }`}
             >
-              Enable DarkMode
-            </label>
+              <input
+                className="form-check-input"
+                onClick={props.toggleMode}
+                type="checkbox"
+                id="flexSwitchCheckDefault"
+              />
+              <label
+                className="form-check-label ms-2"
+                htmlFor="flexSwitchCheckDefault"
+              >
+                <i className={`fas fa-${props.mode === 'light' ? 'moon' : 'sun'} me-1`}></i>
+                {props.mode === 'light' ? 'Dark Mode' : 'Light Mode'}
+              </label>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </div>    </nav>
   );
 };
 

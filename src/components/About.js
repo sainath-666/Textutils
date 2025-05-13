@@ -1,99 +1,154 @@
 import React from "react";
 
 export default function About(props) {
-
-  let myStyle = {
-    color: props.mode === "dark" ? "white" : "#042743",
-    backgroundColor: props.mode === "dark" ? "rgb(36 74 104)" : "white",
-  };
-
-
   return (
-    <div className="container" style={{color: props.mode === "dark" ? "white" : "#042743"}}>
-      <h1 className="my-3">About Us</h1>
-      <div className="accordion" id="accordionExample" style={myStyle}>
-        <div className="accordion-item">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-              style={myStyle}
-            >
-              <strong>Analyze Your Text</strong>
-            </button>
-          </h2>
+    <div
+      className="container"
+      style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+    >
+      <div className="about-header text-center mb-5">
+        <h1 className="display-4 mb-4">About TextUtils</h1>
+        <p className="lead">Your go-to text manipulation and analysis tool</p>
+      </div>
+
+      <div className="row g-4">
+        <div className="col-md-4">
           <div
-            id="collapseOne"
-            className="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample"
+            className="feature-card"
+            style={{
+              background:
+                props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+              padding: "2rem",
+              borderRadius: "15px",
+              boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
+              height: "100%",
+            }}
           >
-            <div className="accordion-body" style={myStyle}>
-              TextUtils gives you a way to analyze your text quickly and
-              efficiently. Be it word count, character count or reading time
-            </div>
+            <i
+              className="fas fa-chart-bar fa-3x mb-4"
+              style={{ color: "#2196f3" }}
+            ></i>
+            <h3 className="h4 mb-3">Text Analysis</h3>
+            <p>
+              Get instant insights about your text including word count,
+              character count, and estimated reading time.
+            </p>
           </div>
         </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-              style={myStyle}
-            >
-              <strong>Free to Use</strong>
-            </button>
-          </h2>
+
+        <div className="col-md-4">
           <div
-            id="collapseTwo"
-            className="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
+            className="feature-card"
+            style={{
+              background:
+                props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+              padding: "2rem",
+              borderRadius: "15px",
+              boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
+              height: "100%",
+            }}
           >
-            <div className="accordion-body" style={myStyle}>
-              TextUtils is a free character counter tool that provides instant
-              character count & word count statistics for a given text.
-              TextUtils reports the number of words and characters. Thus it is
-              suitable for writing text with word/character limit. This is a
-              free online character counter tool that provides instant character
-              count & word count statistics for a given text. TextUtils reports
-              the number of words and characters. Thus it is suitable for
-              writing text with word/character limit.
-            </div>
+            <i
+              className="fas fa-magic fa-3x mb-4"
+              style={{ color: "#2196f3" }}
+            ></i>
+            <h3 className="h4 mb-3">Text Transformation</h3>
+            <p>
+              Transform your text with various operations like case conversion,
+              extra space removal, and more.
+            </p>
           </div>
         </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="false"
-              aria-controls="collapseThree"
-              style={myStyle}
-            >
-              <strong>Browser Compatible</strong>
-            </button>
-          </h2>
+
+        <div className="col-md-4">
           <div
-            id="collapseThree"
-            className="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
+            className="feature-card"
+            style={{
+              background:
+                props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+              padding: "2rem",
+              borderRadius: "15px",
+              boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
+              height: "100%",
+            }}
           >
-            <div className="accordion-body" style={myStyle}>
-              This word counter software works in any web browser such as
-              Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to
-              count characters in facebook, blog, excel document, pdf document,
-              essays, online, etc. This character counter allows you to count
-              the characters and words in a text. The tool is compatible with
-              all browsers and can be used on any device.
+            <i
+              className="fas fa-globe fa-3x mb-4"
+              style={{ color: "#2196f3" }}
+            ></i>
+            <h3 className="h4 mb-3">Universal Access</h3>
+            <p>
+              Works seamlessly across all modern browsers and devices. Free to
+              use, no registration required.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-5 text-center">
+        <h2 className="h3 mb-4">Why Choose TextUtils?</h2>
+        <div className="row g-4">
+          <div className="col-md-3">
+            <div
+              className="stat-card"
+              style={{
+                background:
+                  props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+                padding: "1.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              <i className="fas fa-bolt mb-3" style={{ color: "#2196f3" }}></i>
+              <h4 className="h5">Fast</h4>
+              <p>Instant results</p>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div
+              className="stat-card"
+              style={{
+                background:
+                  props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+                padding: "1.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              <i className="fas fa-lock mb-3" style={{ color: "#2196f3" }}></i>
+              <h4 className="h5">Secure</h4>
+              <p>No data storage</p>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div
+              className="stat-card"
+              style={{
+                background:
+                  props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+                padding: "1.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              <i
+                className="fas fa-tablet-alt mb-3"
+                style={{ color: "#2196f3" }}
+              ></i>
+              <h4 className="h5">Responsive</h4>
+              <p>Works on all devices</p>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div
+              className="stat-card"
+              style={{
+                background:
+                  props.mode === "dark" ? "rgba(255,255,255,0.05)" : "white",
+                padding: "1.5rem",
+                borderRadius: "10px",
+              }}
+            >
+              <i className="fas fa-code mb-3" style={{ color: "#2196f3" }}></i>
+              <h4 className="h5">Open Source</h4>
+              <p>Free forever</p>
             </div>
           </div>
         </div>
