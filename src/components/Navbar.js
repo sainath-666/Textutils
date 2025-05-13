@@ -35,15 +35,42 @@ const Navbar = (props) => {
                 <i className="fas fa-info-circle me-1"></i>
                 About
               </Link>
-            </li>
-          </ul>
+            </li>          </ul>
 
-          <div className="theme-toggle">
-            <div
-              className={`form-check form-switch text-${
-                props.mode === "light" ? "dark" : "light"
-              }`}
+          <div className="d-flex align-items-center">
+            <a
+              href="https://www.linkedin.com/in/sainath666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary me-2"
+              style={{
+                color: props.mode === "dark" ? "white" : "#042743",
+                borderColor: props.mode === "dark" ? "white" : "#042743"
+              }}
             >
+              <i className="fab fa-linkedin me-1"></i>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/sainath-666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary me-3"
+              style={{
+                color: props.mode === "dark" ? "white" : "#042743",
+                borderColor: props.mode === "dark" ? "white" : "#042743"
+              }}
+            >
+              <i className="fab fa-github me-1"></i>
+              GitHub
+            </a>
+
+            <div className="theme-toggle">
+              <div
+                className={`form-check form-switch text-${
+                  props.mode === "light" ? "dark" : "light"
+                }`}
+              >
               <input
                 className="form-check-input"
                 onClick={props.toggleMode}
@@ -54,13 +81,18 @@ const Navbar = (props) => {
                 className="form-check-label ms-2"
                 htmlFor="flexSwitchCheckDefault"
               >
-                <i className={`fas fa-${props.mode === 'light' ? 'moon' : 'sun'} me-1`}></i>
-                {props.mode === 'light' ? 'Dark Mode' : 'Light Mode'}
+                <i
+                  className={`fas fa-${
+                    props.mode === "light" ? "moon" : "sun"
+                  } me-1`}
+                ></i>
+                {props.mode === "light" ? "Dark Mode" : "Light Mode"}
               </label>
             </div>
           </div>
         </div>
-      </div>    </nav>
+      </div>{" "}
+    </nav>
   );
 };
 
