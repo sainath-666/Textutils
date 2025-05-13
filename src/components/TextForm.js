@@ -127,8 +127,6 @@ export default function TextForm(props) {
             ? text
             : "Your text preview will appear here..."}
         </div>
-      </div>
-    </div>
-  );
+      </div>    </div>
   );
 }
